@@ -64,6 +64,27 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 ]
             });
         });
+	    
+	    dataLayer.push({ ecommerce: null });  // Clear the previous ecommerce object.
+dataLayer.push({
+  event: "purchase",
+  ecommerce: {
+      
+      items: [
+       {
+        item_id: "SKU_12345",
+        item_name: "Python",
+        affiliation: "Google Merchandise Store",
+        currency: "USD",
+      },
+      {
+        item_id: "SKU_12346",
+        item_name: "SQL",
+        affiliation: "Google Merchandise Store",
+        currency: "USD",
+      }]
+  }
+});
 	    </script>
 	
     <title>Course Page</title>
